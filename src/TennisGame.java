@@ -7,6 +7,7 @@ public class TennisGame {
 
         boolean isDraw = player1Score == player2Score;
         boolean isEnd = player1Score >= 4 || player2Score >= 4;
+
         if (isDraw) return getGameDrawCalledScore(player1Score);
         if (isEnd) return getGameEndCalledScore(player1Score, player2Score);
 
@@ -29,8 +30,6 @@ public class TennisGame {
 
             default:
                 return "Deuce";
-
-
         }
     }
 
@@ -54,7 +53,6 @@ public class TennisGame {
                 return "Thirty";
             default:
                 return "Forty";
-
         }
 
     }
