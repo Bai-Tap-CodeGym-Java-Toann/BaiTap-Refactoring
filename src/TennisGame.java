@@ -24,13 +24,10 @@ public class TennisGame {
                 return "Love-All";
             case 1:
                 return "Fifteen-All";
-
             case 2:
                 return "Thirty-All";
-
             case 3:
                 return "Forty-All";
-
             default:
                 return "Deuce";
         }
