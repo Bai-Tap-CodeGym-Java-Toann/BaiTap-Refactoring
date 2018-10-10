@@ -7,11 +7,14 @@ public class TennisGame {
 
         boolean isDraw = player1Score == player2Score;
         boolean isEnd = player1Score >= 4 || player2Score >= 4;
-
         if (isDraw) return getGameDrawCalledScore(player1Score);
         if (isEnd) return getGameEndCalledScore(player1Score, player2Score);
 
-        String calledScore = getCalledScore(player1Score) + "-" + getCalledScore(player2Score);
+        String calledScore = getPlayerCalledScore(player1Score)
+                +
+                "-"
+                +
+                getPlayerCalledScore(player2Score);
         return calledScore;
     }
 
@@ -43,7 +46,7 @@ public class TennisGame {
         return "Win for player2";
     }
 
-    private static String getCalledScore(int playerScore) {
+    private static String getPlayerCalledScore(int playerScore) {
         switch (playerScore) {
             case 0:
                 return "Love";
